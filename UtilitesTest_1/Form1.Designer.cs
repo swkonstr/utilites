@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,13 +66,19 @@
             this.numericUpDownPassLenght = new System.Windows.Forms.NumericUpDown();
             this.checkedListBoxPass = new System.Windows.Forms.CheckedListBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.comboBoxFrom = new System.Windows.Forms.ComboBox();
-            this.comboBoxTo = new System.Windows.Forms.ComboBox();
-            this.buttonConvert = new System.Windows.Forms.Button();
-            this.textBoxFrom = new System.Windows.Forms.TextBox();
-            this.textBoxTo = new System.Windows.Forms.TextBox();
-            this.buttonSwap = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBoxMetric = new System.Windows.Forms.ComboBox();
+            this.buttonSwap = new System.Windows.Forms.Button();
+            this.textBoxTo = new System.Windows.Forms.TextBox();
+            this.textBoxFrom = new System.Windows.Forms.TextBox();
+            this.buttonConvert = new System.Windows.Forms.Button();
+            this.comboBoxTo = new System.Windows.Forms.ComboBox();
+            this.comboBoxFrom = new System.Windows.Forms.ComboBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.labelTimer1 = new System.Windows.Forms.Label();
+            this.ButtionTimer_1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -82,6 +89,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPassLenght)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,7 +100,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(312, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(534, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,8 +128,8 @@
             this.SaveToolStripMenuItem,
             this.LoadToolStripMenuItem});
             this.блокнотToolStripMenuItem.Name = "блокнотToolStripMenuItem";
-            this.блокнотToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.блокнотToolStripMenuItem.Text = "Блокнот";
+            this.блокнотToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.блокнотToolStripMenuItem.Text = "Options";
             // 
             // InsertDateToolStripMenuItem
             // 
@@ -182,11 +190,13 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(312, 237);
+            this.tabControl1.Size = new System.Drawing.Size(534, 307);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -198,9 +208,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(304, 211);
+            this.tabPage1.Size = new System.Drawing.Size(526, 281);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Счетчик";
+            this.tabPage1.Text = "Counter";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // labelCount
@@ -218,7 +228,7 @@
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(75, 23);
             this.buttonReset.TabIndex = 2;
-            this.buttonReset.Text = "Сброс";
+            this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
@@ -257,9 +267,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(304, 211);
+            this.tabPage2.Size = new System.Drawing.Size(526, 281);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Генератор";
+            this.tabPage2.Text = "Generate";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // checkBoxRandom
@@ -368,9 +378,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(304, 211);
+            this.tabPage3.Size = new System.Drawing.Size(526, 281);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Блокнот";
+            this.tabPage3.Text = "Notepad";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // richTextBoxNotepad
@@ -378,7 +388,7 @@
             this.richTextBoxNotepad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxNotepad.Location = new System.Drawing.Point(3, 3);
             this.richTextBoxNotepad.Name = "richTextBoxNotepad";
-            this.richTextBoxNotepad.Size = new System.Drawing.Size(298, 205);
+            this.richTextBoxNotepad.Size = new System.Drawing.Size(520, 275);
             this.richTextBoxNotepad.TabIndex = 0;
             this.richTextBoxNotepad.Text = "";
             // 
@@ -392,9 +402,9 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(304, 211);
+            this.tabPage4.Size = new System.Drawing.Size(526, 281);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Пароли";
+            this.tabPage4.Text = "Pass";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // textBoxPass
@@ -461,6 +471,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Controls.Add(this.comboBoxMetric);
             this.tabPage5.Controls.Add(this.buttonSwap);
             this.tabPage5.Controls.Add(this.textBoxTo);
@@ -470,26 +481,68 @@
             this.tabPage5.Controls.Add(this.comboBoxFrom);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(304, 211);
+            this.tabPage5.Size = new System.Drawing.Size(526, 281);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Конвертер";
+            this.tabPage5.Text = "Convert";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // comboBoxFrom
+            // label1
             // 
-            this.comboBoxFrom.FormattingEnabled = true;
-            this.comboBoxFrom.Items.AddRange(new object[] {
-            "mm",
-            "cm",
-            "dm",
-            "m",
-            "km",
-            "mile"});
-            this.comboBoxFrom.Location = new System.Drawing.Point(8, 93);
-            this.comboBoxFrom.Name = "comboBoxFrom";
-            this.comboBoxFrom.Size = new System.Drawing.Size(94, 21);
-            this.comboBoxFrom.TabIndex = 0;
-            this.comboBoxFrom.Text = "mm";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(395, 29);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Simple offline desktop application";
+            // 
+            // comboBoxMetric
+            // 
+            this.comboBoxMetric.FormattingEnabled = true;
+            this.comboBoxMetric.Items.AddRange(new object[] {
+            "длина",
+            "вес"});
+            this.comboBoxMetric.Location = new System.Drawing.Point(229, 36);
+            this.comboBoxMetric.Name = "comboBoxMetric";
+            this.comboBoxMetric.Size = new System.Drawing.Size(86, 21);
+            this.comboBoxMetric.TabIndex = 6;
+            this.comboBoxMetric.SelectedIndexChanged += new System.EventHandler(this.comboBoxMetric_SelectedIndexChanged);
+            // 
+            // buttonSwap
+            // 
+            this.buttonSwap.Location = new System.Drawing.Point(230, 78);
+            this.buttonSwap.Name = "buttonSwap";
+            this.buttonSwap.Size = new System.Drawing.Size(86, 23);
+            this.buttonSwap.TabIndex = 5;
+            this.buttonSwap.Text = "<->";
+            this.buttonSwap.UseVisualStyleBackColor = true;
+            this.buttonSwap.Click += new System.EventHandler(this.buttonSwap_Click);
+            // 
+            // textBoxTo
+            // 
+            this.textBoxTo.Location = new System.Drawing.Point(340, 132);
+            this.textBoxTo.Name = "textBoxTo";
+            this.textBoxTo.ReadOnly = true;
+            this.textBoxTo.Size = new System.Drawing.Size(96, 20);
+            this.textBoxTo.TabIndex = 4;
+            // 
+            // textBoxFrom
+            // 
+            this.textBoxFrom.Location = new System.Drawing.Point(113, 132);
+            this.textBoxFrom.Name = "textBoxFrom";
+            this.textBoxFrom.Size = new System.Drawing.Size(93, 20);
+            this.textBoxFrom.TabIndex = 3;
+            this.textBoxFrom.Text = "1";
+            // 
+            // buttonConvert
+            // 
+            this.buttonConvert.Location = new System.Drawing.Point(229, 130);
+            this.buttonConvert.Name = "buttonConvert";
+            this.buttonConvert.Size = new System.Drawing.Size(86, 22);
+            this.buttonConvert.TabIndex = 2;
+            this.buttonConvert.Text = "Convert";
+            this.buttonConvert.UseVisualStyleBackColor = true;
+            this.buttonConvert.Click += new System.EventHandler(this.buttonConvert_Click);
             // 
             // comboBoxTo
             // 
@@ -501,65 +554,73 @@
             "m",
             "km",
             "mile"});
-            this.comboBoxTo.Location = new System.Drawing.Point(199, 93);
+            this.comboBoxTo.Location = new System.Drawing.Point(341, 80);
             this.comboBoxTo.Name = "comboBoxTo";
             this.comboBoxTo.Size = new System.Drawing.Size(96, 21);
             this.comboBoxTo.TabIndex = 1;
             this.comboBoxTo.Text = "mm";
             // 
-            // buttonConvert
+            // comboBoxFrom
             // 
-            this.buttonConvert.Location = new System.Drawing.Point(107, 117);
-            this.buttonConvert.Name = "buttonConvert";
-            this.buttonConvert.Size = new System.Drawing.Size(86, 22);
-            this.buttonConvert.TabIndex = 2;
-            this.buttonConvert.Text = "Конверт";
-            this.buttonConvert.UseVisualStyleBackColor = true;
-            this.buttonConvert.Click += new System.EventHandler(this.buttonConvert_Click);
+            this.comboBoxFrom.FormattingEnabled = true;
+            this.comboBoxFrom.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+            this.comboBoxFrom.Location = new System.Drawing.Point(114, 80);
+            this.comboBoxFrom.Name = "comboBoxFrom";
+            this.comboBoxFrom.Size = new System.Drawing.Size(94, 21);
+            this.comboBoxFrom.TabIndex = 0;
+            this.comboBoxFrom.Text = "mm";
             // 
-            // textBoxFrom
+            // tabPage6
             // 
-            this.textBoxFrom.Location = new System.Drawing.Point(8, 119);
-            this.textBoxFrom.Name = "textBoxFrom";
-            this.textBoxFrom.Size = new System.Drawing.Size(93, 20);
-            this.textBoxFrom.TabIndex = 3;
-            this.textBoxFrom.Text = "1";
+            this.tabPage6.Controls.Add(this.labelTimer1);
+            this.tabPage6.Controls.Add(this.ButtionTimer_1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(526, 281);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Timer";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // textBoxTo
+            // labelTimer1
             // 
-            this.textBoxTo.Location = new System.Drawing.Point(199, 119);
-            this.textBoxTo.Name = "textBoxTo";
-            this.textBoxTo.ReadOnly = true;
-            this.textBoxTo.Size = new System.Drawing.Size(96, 20);
-            this.textBoxTo.TabIndex = 4;
+            this.labelTimer1.AutoSize = true;
+            this.labelTimer1.Location = new System.Drawing.Point(23, 24);
+            this.labelTimer1.Name = "labelTimer1";
+            this.labelTimer1.Size = new System.Drawing.Size(35, 13);
+            this.labelTimer1.TabIndex = 1;
+            this.labelTimer1.Text = "label1";
             // 
-            // buttonSwap
+            // ButtionTimer_1
             // 
-            this.buttonSwap.Location = new System.Drawing.Point(107, 91);
-            this.buttonSwap.Name = "buttonSwap";
-            this.buttonSwap.Size = new System.Drawing.Size(86, 23);
-            this.buttonSwap.TabIndex = 5;
-            this.buttonSwap.Text = "<->";
-            this.buttonSwap.UseVisualStyleBackColor = true;
-            this.buttonSwap.Click += new System.EventHandler(this.buttonSwap_Click);
+            this.ButtionTimer_1.Location = new System.Drawing.Point(200, 43);
+            this.ButtionTimer_1.Name = "ButtionTimer_1";
+            this.ButtionTimer_1.Size = new System.Drawing.Size(75, 23);
+            this.ButtionTimer_1.TabIndex = 0;
+            this.ButtionTimer_1.Text = "TestTimer";
+            this.ButtionTimer_1.UseVisualStyleBackColor = true;
+            this.ButtionTimer_1.Click += new System.EventHandler(this.ButtionTimer_1_Click);
             // 
-            // comboBoxMetric
+            // tabPage7
             // 
-            this.comboBoxMetric.FormattingEnabled = true;
-            this.comboBoxMetric.Items.AddRange(new object[] {
-            "длина",
-            "вес"});
-            this.comboBoxMetric.Location = new System.Drawing.Point(107, 64);
-            this.comboBoxMetric.Name = "comboBoxMetric";
-            this.comboBoxMetric.Size = new System.Drawing.Size(86, 21);
-            this.comboBoxMetric.TabIndex = 6;
-            this.comboBoxMetric.SelectedIndexChanged += new System.EventHandler(this.comboBoxMetric_SelectedIndexChanged);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(526, 281);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Canvas";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // MainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 261);
+            this.ClientSize = new System.Drawing.Size(534, 331);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -581,6 +642,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPassLenght)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -632,6 +695,12 @@
         private System.Windows.Forms.ComboBox comboBoxFrom;
         private System.Windows.Forms.Button buttonSwap;
         private System.Windows.Forms.ComboBox comboBoxMetric;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label labelTimer1;
+        private System.Windows.Forms.Button ButtionTimer_1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage7;
     }
 }
 

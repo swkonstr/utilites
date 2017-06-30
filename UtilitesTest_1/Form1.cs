@@ -234,5 +234,11 @@ namespace NameSpace_1
                     break;
             }
         }
+
+        private void ButtionTimer_1_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            labelTimer1.Text = timer1.ToString();
+        }
     }
 }
